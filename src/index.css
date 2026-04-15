@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,700;1,700&family=Oswald:wght@700&family=Teko:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .bg-primary{
   background-color:#faf4ec;
-  font-family: "'Inter', sans-serif";
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }

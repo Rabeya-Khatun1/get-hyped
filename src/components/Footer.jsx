@@ -6,9 +6,9 @@ import ExactHypeLogo from './HypeLogo';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FAF4EC] pt-20 font-['Inter']">
-      <div className="flex flex-col items-center text-center px-6 pb-20">
-        <h2 className=" md:text-7xl font-black tracking-tighter text-[#1a1a1a] leading-[0.9] mb-10">
+    <footer className="bg-[#FAF4EC]">
+      <div className="flex flex-col items-center text-center px-6">
+        <h2 className=" md:text-7xl font-black tracking-tighter leading-[0.9] mb-10">
          Let's Get Hyped!
         </h2>
         
@@ -30,7 +30,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-<div className="relative mt-32 font-['Inter']">
+<div className="relative ">
   <div 
     className="absolute inset-0 bg-white" 
     style={{ 
@@ -44,7 +44,7 @@ const Footer = () => {
       top: '0'
     }}
   ></div>
-  <div className="relative z-10 px-6 md:px-16 pt-24 pb-10">
+  <div className="relative z-10 px-6 md:px-16 py-10">
     <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 pt-10">
       <div className="flex flex-col gap-12">
         <div className="scale-[1.8] origin-left">
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3 w-full md:w-auto md:mt-10">
+      <div className="grid grid-cols-4 gap-3 w-full md:w-auto md:mt-10">
         {['Expertises', 'Work', 'About', 'Contact'].map((item) => (
           <button key={item} className="bg-[#F5F5F5] px-8 py-4 rounded-2xl font-black text-[#1a1a1a] hover:bg-black hover:text-white transition-all text-[14px]">
             {item}
