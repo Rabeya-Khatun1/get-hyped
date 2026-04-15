@@ -69,7 +69,7 @@ const StatsCards = () => {
               stiffness: 250, 
               damping: 25 
             }}
-            className="relative w-[320px] h-[450px] rounded-[3em] shadow-xl overflow-hidden cursor-pointer"
+            className="relative w-[310px] h-[400px] rounded-[2em] shadow-xl overflow-hidden cursor-pointer"
           >
             {card.video ? (
               <div className="w-full h-full">
@@ -90,7 +90,7 @@ const StatsCards = () => {
                   <p className="font-semibold text-[1.15em] text-black tracking-[-0.03em] uppercase leading-[1.1em]">
                     {card.subtitle}
                   </p>
-                  <div className="h-0.5 bg-[#161616]"></div>
+                  <div className="h-0.5 bg-[#161616] my-1"></div>
                   <p className="text-[14px] leading-tight font-medium text-black/80">
                     {card.desc}
                   </p>

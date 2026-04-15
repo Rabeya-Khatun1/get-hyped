@@ -25,7 +25,13 @@ const Navbar = () => {
           </motion.a>
         ))}
       </div>
-      <CustomButton text="Get Results" icon={HiFire} onClick={() => console.log("clicked")} />
+    <CustomButton
+  text="Get Results"
+  icon={HiFire}
+  onClick={() => console.log("clicked")}
+  className="bg-[#fcb8fa] hover:bg-[#f7a5f7] text-gray-900"
+  iconColorClass="text-amber-500"
+/>
 
     </nav>
   );
