@@ -5,8 +5,6 @@ const Badge = () => {
     <div className="flex items-center justify-center">
       
       <div className="relative flex items-center justify-center w-28 h-28 bg-[#FFB6FF] rounded-full animate-spin-once ">
-        
-        {/* SVG Circular Text */}
         <svg className="absolute w-full h-full p-1" viewBox="0 0 200 200">
           <defs>
             <path 

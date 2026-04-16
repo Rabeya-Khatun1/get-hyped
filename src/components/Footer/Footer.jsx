@@ -76,7 +76,7 @@ const Footer = () => {
             <div
                 ref={containerRef}
                 onMouseMove={handleMouseMove}
-                className=" relative overflow-hidden border-t-1 border-gray-300 pt-64 pb-32"
+                className=" md:relative overflow-hidden border-t-1 border-gray-300 pt-56 pb-8"
             >
                 {particles.map((p) => (
                     <img
@@ -90,38 +90,38 @@ const Footer = () => {
                             "--ty": `${p.endY - p.startY}px`,
                         }}
                     />
-                ))}          
+                ))}
 
-            <div className="flex flex-col items-center text-center px-6">
-                <h2 className="text-[88px] text-[#161616] font-semibold leading-[1.5em]  tracking-[-0.05em] mb-[10px]">
-                    Let's Get Hyped!
-                </h2>
+                <div className="flex flex-col items-center text-center px-6">
+                    <h2 className="text-[88px] text-[#161616] font-semibold leading-[1.5em]  tracking-[-0.05em] mb-[10px]">
+                        Let's Get Hyped!
+                    </h2>
 
-                <div className="relative flex z-10 items-center gap-[0.5em] cursor-pointer">
+                    <div className="relative flex z-10 items-center gap-[0.5em] cursor-pointer">
 
-                    <CustomButton
-                        text="Mail ons direct"
-                        icon={HiMail}
-                        className="
-    bg-transparent border-[1.5px] border-black bg-[#efefef] text-black
-    [&>div]:bg-black
+                        <CustomButton
+                            text="Mail ons direct"
+                            icon={HiMail}
+                            className="
+                            bg-transparent border-[1.5px] border-black bg-white text-black
+                           [&>div]:bg-black
   "
-                        iconColorClass="text-white"
-                    />
-                    <CustomButton
-                        text="Get Results"
-                        icon={HiFire}
-                        className="bg-[#FF5F1F] text-white border-none hover:bg-[#e0521a]"
-                        iconBgClass="bg-white"
-                        iconColorClass="text-[#FF5F1F]"
-                    />
+                            iconColorClass="text-white"
+                        />
+                        <CustomButton
+                            text="Get Results"
+                            icon={HiFire}
+                            className="bg-[#FF5F1F] text-white border-none hover:bg-[#e0521a]"
+                            iconBgClass="bg-white"
+                            iconColorClass="text-[#FF5F1F]"
+                        />
 
+                    </div>
                 </div>
+
             </div>
-     
-            </div>
-<FooterBottom></FooterBottom>
-   <style jsx>{`
+            <FooterBottom></FooterBottom>
+            <style jsx>{`
   .animate-fly {
     animation: fly 2s ease-out forwards;
   }

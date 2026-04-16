@@ -7,7 +7,7 @@ const cards = [
     title: "10M+",
     subtitle: "Organische views",
     desc: "Groei door slimme content",
-    bg: "bg-[#0d8dff]", 
+    bg: "bg-[#0d8dff]",
     rotate: -6,
   },
   {
@@ -26,7 +26,7 @@ const cards = [
   },
   {
     id: 4,
-    video: "https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4", 
+    video: "https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4",
     poster: "https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c402fa5b2a05b98200d317_video-thumb-02.avif",
     rotate: 6,
   },
@@ -38,18 +38,18 @@ const StatsCards = () => {
 
   const handleMouseEnter = (id) => {
     setHoveredId(id);
-    setRandomSeed(Math.random()); 
+    setRandomSeed(Math.random());
   };
 
   return (
-    <div className="flex items-center justify-center py-20 overflow-hidden">
+    <div className="flex  md:flex-row items-center justify-center py-10 md:py-20 overflow-hidden gap-6 md:gap-0">
       {cards.map((card, index) => {
         const isHovered = hoveredId === card.id;
         const isAnyHovered = hoveredId !== null;
-        const currentRotation = isHovered 
-          ? 0 
-          : isAnyHovered 
-            ? (Math.sin(index + randomSeed) * 20) 
+        const currentRotation = isHovered
+          ? 0
+          : isAnyHovered
+            ? (Math.sin(index + randomSeed) * 20)
             : card.rotate;
 
         return (
@@ -57,24 +57,27 @@ const StatsCards = () => {
             key={card.id}
             onMouseEnter={() => handleMouseEnter(card.id)}
             onMouseLeave={() => setHoveredId(null)}
+            className={`${index > 1 ? "hidden md:block" : "block"} 
+              relative w-[210px] h-[300px] md:w-[310px] md:h-[400px] rounded-[2em] shadow-xl overflow-hidden cursor-pointer`}
             animate={{
               rotate: currentRotation,
               scale: isHovered ? 1.08 : 1,
               zIndex: isHovered ? 50 : 1,
-              marginLeft: index === 0 ? "0px" : (isHovered ? "80px" : "-48px"),
-              marginRight: isHovered ? "100px" : "0px",
+              marginLeft: typeof window !== "undefined" && window.innerWidth > 768
+                ? (index === 0 ? "0px" : (isHovered ? "80px" : "-48px"))
+                : "0px",
+              marginRight: typeof window !== "undefined" && window.innerWidth > 768 && isHovered ? "100px" : "0px",
             }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 250, 
-              damping: 25 
+            transition={{
+              type: "spring",
+              stiffness: 250,
+              damping: 25
             }}
-            className="relative w-[310px] h-[400px] rounded-[2em] shadow-xl overflow-hidden cursor-pointer"
           >
             {card.video ? (
               <div className="w-full h-full">
-                <video 
-                  muted loop autoPlay playsInline 
+                <video
+                  muted loop autoPlay playsInline
                   poster={card.poster}
                   className="w-full h-full object-cover"
                 >
