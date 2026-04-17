@@ -76,7 +76,7 @@ const Footer = () => {
             <div
                 ref={containerRef}
                 onMouseMove={handleMouseMove}
-                className=" md:relative overflow-hidden border-t-1 border-gray-300 pt-56 pb-8"
+                className="hidden md:block md:relative overflow-hidden border-t-1 border-gray-300 pt-56 pb-8"
             >
                 {particles.map((p) => (
                     <img
