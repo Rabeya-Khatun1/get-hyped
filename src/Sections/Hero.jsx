@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import StatsCards from "./StatsCards";
+import StatsCards from "../components/StatsCards";
 
 export default function Hero() {
   return (

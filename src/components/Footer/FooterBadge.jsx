@@ -12,8 +12,6 @@ const Badge = () => {
 
       setRotation(prev => {
         let next = prev - delta * 0.05; 
-
-        // keep it small range
         if (next > 6) next = 6;
         if (next < -6) next = -6;
 
