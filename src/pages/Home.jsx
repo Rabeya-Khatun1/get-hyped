@@ -4,6 +4,7 @@ import Hero from "../Sections/Hero";
 import AboutSection from "../Sections/AboutSection";
 import MySwiper from "../Sections/SliderSection";
 import SelectedWorkSection from "../Sections/SelectedWorkSection";
+import BrandSections from "../Sections/BrandSections";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection></AboutSection>
       <MySwiper></MySwiper>
       <SelectedWorkSection></SelectedWorkSection>
+      <BrandSections></BrandSections>
     </div>
   );
 }
