@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomButton from "../components/CustomButton";
-import { BiRightArrow, BiRightArrowAlt } from "react-icons/bi";
+import { BiRightArrowAlt } from "react-icons/bi";
 import VideoCard from "../components/VideoCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -95,10 +95,17 @@ const StackSlider = () => {
               </div>
 
               <div className="w-full  flex justify-end z-10">
-                <VideoCard 
-        videoSrc={s.video} 
-        accentColor={s.accent} 
-      />
+      <div className="w-full flex justify-end z-10">
+  <video
+    src={s.video}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-[280px] h-[380px] object-cover rounded-[30px] mt-16 border-[8px] shadow-2xl rotate-2 transition-all duration-500"
+    style={{ borderColor: s.accent || "white" }}
+  />
+</div>
               
               </div>
 

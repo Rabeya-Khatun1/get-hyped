@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import Hero from "../Sections/Hero";
 import AboutSection from "../Sections/AboutSection";
-import SliderSection from "../Sections/SliderSection";
 import MySwiper from "../Sections/SliderSection";
+import SelectedWorkSection from "../Sections/SelectedWorkSection";
 
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
     <div className="bg-primary min-h-screen">
       <Hero />
       <AboutSection></AboutSection>
-      {/* <SliderSection></SliderSection> */}
       <MySwiper></MySwiper>
+      <SelectedWorkSection></SelectedWorkSection>
     </div>
   );
 }
