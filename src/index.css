@@ -7,3 +7,77 @@
   font-weight: 300;
 }
 
+.stack-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* default state (slightly below) */
+.stack-swiper .swiper-slide {
+  transform: translateY(80px) scale(0.95);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* active slide (front) */
+.stack-swiper .swiper-slide-active {
+  transform: translateY(0px) scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* previous slide goes up */
+.stack-swiper .swiper-slide-prev {
+  transform: translateY(-60px) scale(0.98);
+  opacity: 0.4;
+}
+
+/* next slide stays below (hidden but ready) */
+.stack-swiper .swiper-slide-next {
+  transform: translateY(120px) scale(0.9);
+  opacity: 0.2;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+/* animation (same as before) */
+.stack-swiper .swiper-slide {
+  transform: translateY(120px) scale(0.92);
+  opacity: 0.3;
+  transition: all 0.9s ease;
+}
+
+.stack-swiper .swiper-slide-active {
+  transform: translateY(0px) scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.stack-swiper .swiper-slide-prev {
+  transform: translateY(-120px) scale(0.95);
+  opacity: 0.4;
+}
+
+.stack-swiper .swiper-slide-next {
+  transform: translateY(160px) scale(0.9);
+  opacity: 0.2;
+}
