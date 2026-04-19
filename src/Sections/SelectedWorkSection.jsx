@@ -20,7 +20,7 @@ const SelectedWorkSection = () => {
     const yRight = useTransform(smoothProgress, [0, 1], [0, -150]);  
 
     return (
-        <div ref={containerRef} className="w-full bg-[#f9f7f2] pb-40 overflow-hidden">
+        <div ref={containerRef} className="w-full bg-[#f9f7f2] overflow-hidden">
             <div className="max-w-[48em] flex flex-col items-start justify-start w-full pt-24 px-28">
                 <h1 className='text-[90px] leading-[80px] font-bold text-[#222222] tracking-[-0.05em] mb-2'>
                     Content <br/> dat scoort.
