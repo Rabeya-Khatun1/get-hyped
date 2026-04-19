@@ -5,20 +5,20 @@ import { PiArrowRightLight } from "react-icons/pi";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen flex flex-col px-8 md:px-16 lg:px-24 py-12 md:py-10 relative max-w-[1600px] mx-auto text-[#222222]">
+    <section className="min-h-screen flex flex-col px-4 md:px-16 lg:px-24 md:py-10 relative max-w-[1600px] mx-auto text-[#222222]">
       
-      <div className="mb-16 md:mb-16 ml-0 md:ml-11 max-w-6xl">
-        <h1 className="text-[3.5em] leading-[.95em] font-semibold tracking-[-0.05em]">
-          Wij maken content die opvalt. Die <br />
-          blijft hangen. Die jouw doelgroep <br />
-          raakt en jouw merk in beweging <br />
+      <div className="mb-8 md:mb-16 md:ml-11 md:max-w-6xl">
+        <h1 className="text-[34px] md:text-[3.5em] leading-[1.1em] md:leading-[.95em] font-semibold tracking-[-0.05em]">
+          Wij maken content die opvalt. Die <br className="hidden md:block" />
+          blijft hangen. Die jouw doelgroep <br className="hidden md:block" />
+          raakt en jouw merk in beweging <br className="hidden md:block" />
           brengt. Snel, krachtig en energiek.
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-[50px] md:gap-[140px] items-end justify-start ml-0 md:ml-[-66px]">
         
  <div className="lg:col-span-3 md:col-span-12">
-  <div className="h-[305px] w-[220px] overflow-hidden rounded-2xl md:rotate-0 rotate-[5deg]">
+  <div className="h-[410px] w-[300px] ml-6  md:h-[305px] md:w-[220px] md:ml-0 overflow-hidden rounded-[18px] md:rounded-2xl md:rotate-0 rotate-[3deg]">
 
     <img
       src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/6894757aa6dd3f84f6e463a2_Anniek%20Bril.webp"
@@ -38,25 +38,16 @@ const AboutSection = () => {
 </div>
 
         <div className="md:col-span-8 lg:col-span-9 flex flex-col justify-end">
-          <div className="max-w-xl">
-
-            <div className="space-y-1">
-              <p className="text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
-                We stoppen niet bij mooie plaatjes en
-              </p>
-              <p className="text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
-                vette beelden. We maken het meetbaar.
-              </p>
-              <p className="text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
-                Zo weet je precies wat werkt en wat niet.
-              </p>
-              <p className="text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
-                Nooit meer content zonder strategie.
-              </p>
-              <p className="text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
-                Nooit meer content zonder resultaat.
-              </p>
-            </div>
+          <div className="md:max-w-xl">
+<div className="space-y-1">
+  <p className="text-[1.3em] md:text-[1.4em] leading-[1.1em] font-semibold tracking-[-0.03em]">
+    <span className="block md:inline">We stoppen niet bij mooie plaatjes en</span>
+    <span className="block"> vette beelden. We maken het meetbaar.</span>
+    <span className="block"> Zo weet je precies wat werkt en wat niet.</span>
+    <span className="block"> Nooit meer content zonder strategie.</span>
+    <span className="block"> Nooit meer content zonder resultaat.</span>
+  </p>
+</div>
 
             <div className="pt-4">
               <CustomButton
@@ -71,7 +62,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-12 right-8 md:right-16 lg:right-32 group">
+      <div className="hidden md:block absolute bottom-12 right-8 md:right-16 lg:right-32 group">
         <div className="w-[40px] h-[40px] border border-black rounded-xl flex items-center justify-center cursor-pointer relative overflow-hidden">
 
           <FaArrowDown className="text-[#ff4704] text-[18px] absolute transition-all duration-500

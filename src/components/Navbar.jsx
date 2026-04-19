@@ -28,7 +28,7 @@ const Navbar = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 md:px-[1.6em] h-[5.7em] z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 flex items-center justify-between px-2 md:px-6 md:px-[1.6em] h-[5.7em] z-50 transition-all duration-300"
     >
       <div className="flex-shrink-0 cursor-pointer relative z-[60]">
         <Logo width={130} height={53} />
