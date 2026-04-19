@@ -1,15 +1,32 @@
-
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
-
 export default function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2, 
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      direction: 'vertical',
+      smooth: true,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <div className="bg-primary overflow-x-hidden min-h-screen">
       <Navbar />
-  <Home/>
-      
+      <Home />
       <Footer />
     </div>
   );
