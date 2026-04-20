@@ -43,8 +43,8 @@ cards.forEach((card, index) => {
     tl.to(cards[index], {
       yPercent: -30,
       rotateX: 45,    
-      rotateY: 20,    
-      rotateZ: 5,     
+      rotateY: -20,    
+      rotateZ: -5,     
       z: -500,
       scale: 0.5,
       opacity: 0, 

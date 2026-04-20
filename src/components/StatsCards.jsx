@@ -62,7 +62,7 @@ const mobileRotation = index % 2 === 0 ? 0 : -4;
    className={`
       ${index > 1 ? "hidden md:block" : "block"} 
       relative flex-shrink-0
-      w-[195px] h-[250px] md:w-[310px] md:h-[400px] rounded-[1em]
+      w-[185px] h-[250px] md:w-[310px] md:h-[400px] rounded-[1em]
       md:rounded-[2em] overflow-hidden cursor-pointer
     `}
     animate={{

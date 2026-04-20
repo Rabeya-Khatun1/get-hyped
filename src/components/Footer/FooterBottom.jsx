@@ -30,9 +30,9 @@ const FooterBottom = () => {
                             }}
                         ></div>
 
-                        <div className="relative pt-15 w-full">
-                            <div className="md:flex justify-start items-center px-2">
-                                <ExactHypeLogo width={300} height={250} />
+                        <div className="relative pt-[51px] w-full">
+                            <div className="md:flex justify-start items-center px-1">
+                                <ExactHypeLogo width={300} height={265} />
                             </div>
                         </div>
 
