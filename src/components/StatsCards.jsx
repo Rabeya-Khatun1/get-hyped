@@ -44,7 +44,7 @@ const StatsCards = () => {
   };
 
   return (
-    <div className="flex  md:flex-row items-center justify-center py-10 md:py-20 overflow-hidden gap-0">
+    <div className="flex  md:flex-row items-center justify-center py-10 md:py-20 overflow-visible gap-0">
       {cards.map((card, index) => {
         const isHovered = hoveredId === card.id;
         const isAnyHovered = hoveredId !== null;
@@ -63,7 +63,7 @@ const mobileRotation = index % 2 === 0 ? 0 : -4;
       ${index > 1 ? "hidden md:block" : "block"} 
       relative flex-shrink-0
       w-[195px] h-[250px] md:w-[310px] md:h-[400px] rounded-[1em]
-      md:rounded-[2em] shadow-xl overflow-hidden cursor-pointer
+      md:rounded-[2em] overflow-hidden cursor-pointer
     `}
     animate={{
       rotate: isMobile ? mobileRotation : currentRotation,
@@ -71,9 +71,9 @@ const mobileRotation = index % 2 === 0 ? 0 : -4;
       zIndex: isHovered ? 50 : (isMobile && index === 0 ? 10 : 1),
       marginLeft: isMobile 
         ? (index === 0 ? "0px" : "-4px")
-        : (index === 0 ? "0px" : (isHovered ? "80px" : "-48px")),
+        : (index === 0 ? "0px" : (isHovered ? "80px" : "-20px")),
 
-      marginRight: (!isMobile && isHovered) ? "100px" : "0px",
+      marginRight: (!isMobile && isHovered) ? "60px" : "0px",
     }}
     transition={{
       type: "spring",

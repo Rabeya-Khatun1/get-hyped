@@ -26,10 +26,10 @@ const SelectedWorkSection = () => {
         offset: ["start start", "end end"]
     });
     
-    const dynamicMargin = useTransform(mobileScroll, [0, 1], [-60, -120]);
+    const dynamicMargin = useTransform(mobileScroll, [0, 1], [-60, -100]);
 
     return (
-        <div ref={containerRef} className="w-full bg-[#f9f7f2] overflow-hidden pb-20">
+        <div ref={containerRef} className="w-full overflow-hidden pb-20">
             <div className="max-w-[48em] flex flex-col items-start justify-start w-full pt-10 px-5 md:pt-24 md:px-28">
                 <h1 className='text-[55px] leading-[50px] md:text-[90px] md:leading-[80px] font-bold text-[#222222] tracking-[-0.05em] mb-2'>
                     Content <br/> dat scoort.
@@ -50,7 +50,7 @@ const SelectedWorkSection = () => {
 
                 <motion.div
                     style={{ y: typeof window !== 'undefined' && window.innerWidth > 768 ? yLeft : 0 }}
-                    className="relative md:absolute md:left-[50px] md:bottom-[0%] z-10 -rotate-2 md:rotate-0"
+                    className="relative md:absolute md:left-[50px] md:bottom-[15%] z-10 -rotate-2 md:rotate-0"
                 >
                     <VideoCard 
                         videoSrc="https://gethyped.b-cdn.net/Bullit/Bullit%20%7C%20Loop.mp4" 
@@ -65,7 +65,7 @@ const SelectedWorkSection = () => {
                         y: typeof window !== 'undefined' && window.innerWidth > 768 ? yCenter : 0,
                         marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? dynamicMargin : 0 
                     }}
-                    className="relative md:mt-0 md:absolute md:left-[50%] md:top-[48%] md:translate-x-[-50%] md:translate-y-[-50%] z-20"
+                    className="relative md:mt-0 md:absolute md:left-[50%] md:top-[45%] md:translate-x-[-50%] md:translate-y-[-50%] z-20"
                 >
                     <VideoCard 
                         videoSrc="https://gethyped.b-cdn.net/Roasta/roasta-loop.mp4" 
@@ -80,7 +80,7 @@ const SelectedWorkSection = () => {
                         y: typeof window !== 'undefined' && window.innerWidth > 768 ? yRight : 0,
                         marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? dynamicMargin : 0 
                     }}
-                    className="relative md:mt-0 md:absolute md:right-[50px] md:bottom-[23%] z-30 rotate-2 md:rotate-0"
+                    className="relative md:mt-0 md:absolute md:right-[50px] md:bottom-[28%] z-30 rotate-2 md:rotate-0"
                 >
                     <VideoCard 
                         videoSrc="https://gethyped.b-cdn.net/Loco/loco-bites-loop.mp4" 

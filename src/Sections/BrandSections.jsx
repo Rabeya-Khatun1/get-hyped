@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { gsap } from 'gsap'; 
 import 'swiper/css';
 
 const logos = [   
@@ -76,46 +77,84 @@ const logos = [
 ];
 
 const BrandSections = () => {
+    const sectionRef = useRef(null);
+
+const [isScattered, setIsScattered] = useState(false);
+
+ const handleScatter = () => {
+  if (isScattered) return;
+
+  const allCards = gsap.utils.toArray(".logo-card");
+
+  allCards.forEach((card) => {
+    gsap.to(card, {
+      x: gsap.utils.random(-30, 30),
+      y: gsap.utils.random(-20, 20),
+      rotation: gsap.utils.random(-9, 9),
+      ease: "power3.out",
+      force3D: true,
+    });
+  });
+
+  setIsScattered(true);
+};
+const resetScatter = () => {
+  const allCards = gsap.utils.toArray(".logo-card");
+
+  allCards.forEach((card) => {
+    gsap.to(card, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      ease: "power3.out",
+    });
+  });
+
+  setIsScattered(false);
+};
+
     return (
-        <section className="py-[300px] pt-[300px] pb-15 md:pt-0">
-            <h1 className="text-[2.3em] md:text-[3.7em] leading-[0.95em] tracking-[-0.05em] font-semibold ml-4 text-[#3a3a3a] md:text-[#1d1d1d] md:ml-10 mb-8 md:mb-12 ">
+        <section ref={sectionRef} className="py-[300px] pt-[300px] pb-15 md:pt-0 overflow-visible ">
+            <h1 className="scatter-title text-[2.3em] md:text-[3.7em] leading-[0.95em] tracking-[-0.05em] font-semibold ml-4 text-[#3a3a3a] md:text-[#1d1d1d] md:ml-10 mb-8 md:mb-12">
                 These brands <br/> got hyped.
             </h1>
 
-            <div className="">
+            <div className="cursor-pointer">
                 <Swiper
-                    modules={[Autoplay]}
-                    spaceBetween={5} 
-                    slidesPerView={2} 
-                    loop={true}
-                    autoplay={{
-                        delay: 0,
-                        disableOnInteraction: false,
-                    }}
-                    speed={4000} 
-                    breakpoints={{
-        640: { 
-            slidesPerView: 3,
-            spaceBetween: 30 
-        },
-        1024: { 
-            slidesPerView: 5,
-            spaceBetween: 0 
-        },
-    }}
-                    className="flex "
-                >
+  modules={[Autoplay]}
+  spaceBetween={5}
+  slidesPerView={2}
+  loop={true}
+  autoplay={{
+    disableOnInteraction: false,
+  }}
+  speed={2000}
+  breakpoints={{
+    640: { slidesPerView: 3, spaceBetween: 30 },
+    1024: { slidesPerView: 5, spaceBetween: 0 },
+  }}
+  className="!overflow-visible"
+ onSliderFirstMove={handleScatter}
+onTransitionEnd={resetScatter}
+  
+>
                     {logos.map((logo, index) => (
-                        <SwiperSlide key={index} className="!w-auto flex justify-center px-0 md:px-1">
-                            <img 
-                                src={logo} 
-                                alt={`Brand Logo ${index}`} 
-                                className="h-37 md:h-66 w-auto rounded-[20px] md:rounded-xl border-[1.5px] border-[#16161659] transition-all duration-300"
-                            />
+                        <SwiperSlide key={index} className="!w-auto flex justify-center px-0 md:px-1 ">
+                            <div 
+                                onClick={handleScatter}
+                                className="logo-card transition-transform duration-300 active:scale-95 bg-primary"
+                            >
+                                <img 
+                                    src={logo} 
+                                    alt={`Brand Logo ${index}`} 
+                                    className="h-37 md:h-66 w-auto rounded-[20px] md:rounded-xl border-[1.5px] border-[#16161659]"
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
+
         </section>
     );
 };

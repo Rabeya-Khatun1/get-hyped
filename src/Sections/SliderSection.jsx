@@ -27,32 +27,43 @@ const StackSlider = () => {
         pin: true,
       },
     });
-
-    cards.forEach((card, index) => {
-      if (index > 0) {
-        gsap.set(card, {
-          yPercent: 100,
-          scale: 0.8,
-          opacity: 0
-        });
-      }
-      if (index < cards.length - 1) {
-        tl.to(cards[index], {
-          scale: 0.85,
-          yPercent: -10,
-          opacity: 100,
-          duration: 1,
-          ease: "power2.inOut"
-        }, index)
-        .to(cards[index + 1], {
-          yPercent: 0,
-          scale: 1,
-          opacity: 100,
-          duration: 1,
-          ease: "power2.inOut"
-        }, index + 0.1);
-      }
+cards.forEach((card, index) => {
+  if (index > 0) {
+    gsap.set(card, {
+      yPercent: 100,
+      scale: 0.8,
+      opacity: 0,
+      rotateX: -30,
+      rotateY: 0, 
+      transformPerspective: 1000,
     });
+  }
+
+  if (index < cards.length - 1) {
+    tl.to(cards[index], {
+      yPercent: -30,
+      rotateX: 45,    
+      rotateY: 20,    
+      rotateZ: 5,     
+      z: -500,
+      scale: 0.5,
+      opacity: 0, 
+      duration: 1,
+      ease: "power2.in",
+    }, index)
+    .to(cards[index + 1], {
+      yPercent: 0,
+      rotateX: 0,
+      rotateY: 0,     
+      rotateZ: 0,
+      z: 0,
+      scale: 1,
+      opacity: 100,     
+      duration: 1,
+      ease: "power2.out",
+    }, index + 0.1);
+  }
+});
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
