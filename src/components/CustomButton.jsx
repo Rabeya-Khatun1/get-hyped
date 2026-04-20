@@ -45,7 +45,7 @@ const CustomButton = ({
       onClick={onClick}
       className={twMerge(
         "relative group flex items-center justify-between gap-3 px-1 py-1 rounded-[12px] font-bold overflow-hidden transition-all duration-300 shadow-sm shrink-0",
-        "hover:rotate-[-6deg] hover:scale-105 active:scale-95",
+        "hover:rotate-[-6deg] hover:scale-105 hover:rounded-[8px] active:scale-95", // hover:rounded-[8px] দিয়ে বাটনের কার্ভ কমানো হয়েছে
         current.bg,
         current.textColor,
         className 
@@ -57,7 +57,8 @@ const CustomButton = ({
 
       <div
         className={twMerge(
-          "w-8 h-8 rounded-[10px] flex items-center justify-center shadow-sm",
+          "w-8 h-8 rounded-[10px] flex items-center justify-center shadow-sm transition-all duration-300", 
+          " group-hover:scale-90 group-hover:rounded-[5px]", 
           current.iconBg
         )}
       >
