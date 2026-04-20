@@ -113,7 +113,7 @@ const StackSlider = () => {
               <div className="w-full md:w-1/2 flex justify-start md:justify-end order-2 md:order-none ml-6 md:ml-0 my-6 md:my-0 z-10">
                 <video
                   src={s.video} autoPlay loop muted playsInline
-                  className="w-[180px] h-[235px] md:w-[320px] md:h-[420px] object-cover rounded-[20px] md:rounded-[30px] border-[6px] md:border-[8px] mb-20 md:mb-0 shadow-2xl -rotate-2 md:rotate-2"
+                  className="w-[180px] h-[235px] md:w-[320px] md:h-[420px] object-cover rounded-[20px] md:rounded-[30px] border-[4px] md:border-[8px] mb-20 md:mb-0 shadow-2xl -rotate-2 md:rotate-2"
                   style={{ borderColor: s.accent || "white" }}
                 />
               </div>

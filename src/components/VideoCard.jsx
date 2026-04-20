@@ -12,7 +12,7 @@ const VideoCard = ({
     <div className="w-full flex justify-end z-20 relative">
       <div className="relative group mt-16 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)] transform hover:-rotate-[4deg] cursor-pointer">
         <div
-          className="relative w-[340px] h-[460px] md:w-[335px] md:h-[445px] rounded-[24px] border-[8px] shadow-2xl overflow-hidden"
+          className="relative w-[340px] h-[460px] md:w-[335px] md:h-[445px] rounded-[24px] border-[8px] overflow-hidden"
           style={{ borderColor: accentColor }}
         >
 
@@ -32,7 +32,7 @@ const VideoCard = ({
           />
         </div>
         <div className="absolute bottom-4 left-4 right-4 z-30 pointer-events-none">
-          <div className="relative w-full h-[170px] md:h-[190px] drop-shadow-2xl">
+          <div className="relative w-full h-[170px] md:h-[190px] ">
             <svg
               viewBox="0 0 429 174"
               preserveAspectRatio="none"
@@ -45,7 +45,7 @@ const VideoCard = ({
             </svg>
 
             <div className="absolute inset-0 p-5 flex flex-col justify-end text-white pointer-events-auto">
-              <div className="absolute top-2 right-2 bg-white w-11 h-11 rounded-full flex items-center justify-center text-black shadow-md overflow-hidden transition-all duration-300 hover:bg-black hover:text-white">
+              <div className="absolute top-2 right-2 bg-white w-11 h-11 rounded-full flex items-center justify-center text-black overflow-hidden transition-all duration-300 hover:bg-black hover:text-white">
                 <FiArrowUpRight 
                   size={24} 
                   strokeWidth={3} 

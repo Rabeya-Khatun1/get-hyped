@@ -72,12 +72,13 @@ const Footer = () => {
 
     return (
         <footer className="bg-[#FAF4EC] px-[32px]">
-
+<div className="w-full h-[1px] bg-gray-300 my-10"></div>
             <div
                 ref={containerRef}
                 onMouseMove={handleMouseMove}
-                className="hidden md:block md:relative overflow-hidden border-t-1 border-gray-300 pt-64 pb-8"
+                className="hidden md:block md:relative overflow-hidden pt-64 pb-8"
             >
+                
                 {particles.map((p) => (
                     <img
                         key={p.id}

@@ -3,6 +3,7 @@ import { FaLinkedinIn, FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
 import ExactHypeLogo from '../HypeLogo';
 import Badge from './FooterBadge';
 import { motion } from 'framer-motion';
+import { FaGripfire } from "react-icons/fa";
 
 const FooterBottom = () => {
     return (
@@ -129,13 +130,13 @@ const FooterBottom = () => {
                     </div>
                 </div>
 
-                <div className="relative w-full bg-[#FAF4EC] overflow-hidden flex items-end pt-5 md:pt-10 pb-5 ">
+                <div className="relative w-full bg-[#FAF4EC] overflow-hidden flex items-end py-1 md:pt-10  ">
                     <div
-                        className="absolute inset-0 bg-[#e2dacb]"
+                        className="absolute inset-0 bg-[#e2dacb] w-full"
                         style={{
                             borderTopLeftRadius: '10px',
                             borderTopRightRadius: '30px',
-                            transform: 'skewY(-7deg)',
+                            transform: 'skewY(-9deg)',
                             transformOrigin: 'top right',
                             width: '100%',
                             bottom: '-100px'
@@ -146,7 +147,7 @@ const FooterBottom = () => {
 
                         <div className="w-full flex items-start justify-center mb-4">
                             <div className="scale-132 origin-center">
-                                <ExactHypeLogo width={300} height={150} />
+                                <ExactHypeLogo width={260} height={150} />
                             </div>
                         </div>
 
@@ -154,16 +155,16 @@ const FooterBottom = () => {
 
                             <button className="bg-[#FF5F1F] text-white px-4 py-2 rounded-xl font-bold flex items-center gap-2">
                                 Get Hyped! Neem contact op
-                                <span className="bg-white text-[#FF5F1F] rounded-xl p-1">🔥</span>
+                                <span className="bg-white text-[#FF5F1F] rounded-xl p-1"><FaGripfire size={20} /></span>
                             </button>
 
-                            <div className="flex flex-wrap justify-center gap-2">
+                            <div className="flex justify-center gap-2">
                                 {['Expertises', 'Work', 'About', 'Contact'].map((item) => (
                                     <motion.a
                                         key={item}
                                         href={`#${item.toLowerCase()}`}
                                         whileHover={{ y: -3 }}
-                                        className="px-4 py-2 text-sm font-bold bg-white rounded-[10px] shadow-sm text-black"
+                                        className="px-3 md:px-4 py-2 text-sm font-bold bg-white rounded-[10px] shadow-sm text-black"
                                     >
                                         {item}
                                     </motion.a>
@@ -187,20 +188,20 @@ const FooterBottom = () => {
     ))}
 </div>
 
-                            <div className="text-center">
+                            <div className="text-center text-[#4b4b4b] space-y-3">
                                 <p className="text-sm font-semibold">info@gethyped.nl</p>
                                 <p className="text-sm font-semibold">+31 6 1533 7496</p>
 
-                                <p className="mt-3 text-sm font-semibold">
+                                <p className=" text-sm font-semibold">
                                     Beltrumsestraat 6,<br />
                                     7141 AL Groenlo
                                 </p>
 
-                                <p className='text-[10px] text-gray-500 mt-3'>Privacyvoorwaarden</p>
+                                <p className='text-[12px] md:text-[10px] text-gray-500 my-3'>Privacyvoorwaarden</p>
                             </div>
                         </div>
 
-                        <div className="w-full flex flex-col items-center mt-10 border-t pt-4 text-[11px] text-gray-600 gap-2">
+                        <div className="w-full flex flex-col items-center text-[12px] md:text-[11px] text-gray-600 gap-4">
                             <p>© 2025 Get Hyped</p>
                             <p>© Design by Dylan</p>
                         </div>
