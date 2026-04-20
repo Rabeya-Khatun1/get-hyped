@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="flex-shrink-0 cursor-pointer relative z-[60]">
         <Logo width={130} height={53} />
       </div>
-      <div className="hidden md:flex items-center gap-0.5 bg-white text-[#000] rounded-[10px] max-w-[991px] px-2 py-1 border border-gray-100 shadow-sm">
+      <div className="hidden md:flex items-center gap-0.5 bg-white text-[#000] rounded-[10px] max-w-[991px] px-2 py-1">
         {navLinks.map((item) => (
           <motion.a
             key={item}
